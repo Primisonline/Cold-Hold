@@ -1,58 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<title>Welcome Page</title>
-		<!-- This is my page -->
-		<style>
-			/* This changes the color, size, font, and varint */
-			body {
-				color: black;
-				font-size: 16px;
-				font-family: Times New Roman;
-				font-variant: small-caps;
-			}
-			
-			h1 {
-				color: orange;
-				font-size: 48px;
-				text-decoration: underline;
-				text-shadow: 10px 2px 5px black;
-			}
-			
-			h2 {
-				color: orange;
-				font-size: 36px;
-				text-decoraction: underline;
-			}
-		</style>
-	</head>
-	<body>
-		<h1>Favorite Things</h1>
-		<h2>Favorite Places?</h2>
-		<!-- Ordered List -->
-		
-		<ol>
-			<!-- List Items -->
-			<li><span style="color: red;">YouTube.com</span></li>
-			<li><span style="color: forestgreen; font-size: 30px;">Tennessee</span></li>
-			<li><span style="color: orangered;">Reddit.com</span></li>
-		</ol>
-		
-		<h2>Favorite Animal(s)</h2>
-		<!-- Unordered List -->
-		<ul>
-			<!-- List Items -->
-			<li>Beagle</li>
-			<li>Soup Cat</li>
-		</ul>
-		<h2>Favorite Links</h2>
-			<!-- Anchor -->
-			<!-- Absolute Anchor -->
-			<a href="https://youtube.com" target="_blank">YouTube.com</a>
-			<a href="https://google.com" target= "_blank">Google.com</a>
-			<!-- Relative Anchor -->
-			<a href="page2.html">Page 2</a>
-		<h2>Favorite Images</h2>
-			<img src="https://github.com/Primisonline/Cold-Hold/blob/main/happy-beagle.jpg?raw=true" alt=" A Happy Beagle" width= "50%">
-	</body>
+<head>
+    <title>Welcome Page</title>
+    <style>
+        /* General body styling */
+        body {
+            color: black;
+            font-size: 16px;
+            font-family: Times New Roman;
+            font-variant: small-caps;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Container for overall layout */
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Styling for headings */
+        h1 {
+            color: orange;
+            font-size: 48px;
+            text-decoration: underline;
+            text-shadow: 10px 2px 5px black;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: orange;
+            font-size: 36px;
+            text-decoration: underline;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        /* Styling for the sections */
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .favorite-places {
+            background-color: #f4f4f4;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .favorite-animal-links {
+            padding: 20px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            background-color: #fafafa;
+        }
+
+        /* List and link styling */
+        ol, ul {
+            padding-left: 20px;
+        }
+
+        a {
+            display: block;
+            margin-bottom: 10px;
+            color: blue;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Image styling */
+        .image-container {
+            text-align: center;
+        }
+
+        .image-container img {
+            width: 50%;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="section favorite-places">
+            <h1>Favorite Things</h1>
+            <h2>Favorite Places?</h2>
+            <ol>
+                <li><span style="color: red;">YouTube.com</span></li>
+                <li><span style="color: forestgreen; font-size: 30px;">Tennessee</span></li>
+                <li><span style="color: orangered;">Reddit.com</span></li>
+            </ol>
+        </div>
+
+        <div class="section favorite-animal-links">
+            <h2>Favorite Animal(s)</h2>
+            <ul>
+                <li>Beagle</li>
+                <li>Soup Cat</li>
+            </ul>
+            <h2>Favorite Links</h2>
+            <a href="https://youtube.com" target="_blank">YouTube.com</a>
+            <a href="https://google.com" target="_blank">Google.com</a>
+            <a href="page2.html">Page 2</a>
+        </div>
+
+        <div class="section image-container">
+            <h2>Favorite Images</h2>
+            <img src="https://github.com/Primisonline/Cold-Hold/blob/main/happy-beagle.jpg?raw=true" alt="A Happy Beagle">
+        </div>
+    </div>
+</body>
 </html>
