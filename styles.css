@@ -130,3 +130,50 @@ th {
     margin: 0 auto;
     max-width: 125px; /* Set maximum width for the GIF */
 }
+
+/* Additional styles for page 3 elements */
+
+/* Background color element */
+.background-element {
+    background-color: #e0f7fa; /* Light blue background */
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* CSS shape (button) */
+.css-shape {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.css-shape button {
+    padding: 10px 20px;
+    background-color: orange; /* Button background color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.css-shape button:hover {
+    background-color: darkorange; /* Button hover color */
+}
+
+/* Gradient element */
+.gradient-element {
+    background: linear-gradient(to right, #ffcc80, #ffab40); /* Orange gradient */
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    color: white; /* Text color in gradient section */
+}
+
+/* Video placeholder */
+.video-placeholder {
+    padding: 20px;
+    border: 2px dashed #ddd; /* Dashed border for placeholder */
+    text-align: center;
+    margin-bottom: 20px;
+}
