@@ -19,17 +19,23 @@ body {
     margin: 0 15px;
     color: blue;
     text-decoration: none;
+    transition: color 0.3s ease; /* Smooth color transition */
 }
 
 .menu a:hover {
     text-decoration: underline;
 }
 
+.menu a.active {
+    font-weight: bold;
+    color: darkorange; /* Active link color */
+}
+
 /* Container for overall layout */
 .container {
     width: 80%;
     margin: 0 auto;
-    padding: 20px;
+    padding: 30px; /* Increased padding for better spacing */
 }
 
 /* Styling for headings */
@@ -77,6 +83,7 @@ a {
     margin-bottom: 10px;
     color: blue;
     text-decoration: none;
+    transition: color 0.3s ease; /* Smooth color transition */
 }
 
 a:hover {
@@ -92,6 +99,12 @@ a:hover {
     width: 50%;
     border: 2px solid #ddd;
     border-radius: 8px;
+}
+
+/* Responsive Images */
+img {
+    max-width: 100%;
+    height: auto; /* Ensures images scale nicely */
 }
 
 /* Table styling */
