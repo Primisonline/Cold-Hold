@@ -177,3 +177,53 @@ th {
     text-align: center;
     margin-bottom: 20px;
 }
+
+/* Media Controls Styling */
+.media-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+button {
+    padding: 10px 15px;
+    margin: 0 10px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #007bff; /* Default button color */
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+/* Pseudo-class: hover */
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Pseudo-class: active */
+button:active {
+    background-color: #003d7a; /* Even darker blue when active */
+}
+
+/* Pseudo-class: focus */
+button:focus {
+    outline: 2px solid orange; /* Highlight focus with orange outline */
+}
+
+/* Volume Control */
+.volume-control {
+    display: flex;
+    align-items: center;
+}
+
+input[type="range"] {
+    margin-left: 10px;
+}
+
+/* Pseudo-class: visited (for example, if links were used) */
+.menu a:visited {
+    color: purple; /* Change color of visited links */
+}
