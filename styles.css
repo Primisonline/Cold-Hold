@@ -45,6 +45,7 @@ h1 {
     text-decoration: underline;
     text-shadow: 10px 2px 5px black;
     margin-bottom: 20px;
+    animation: headerAnimation 5s infinite;
 }
 
 h2 {
@@ -55,59 +56,98 @@ h2 {
     margin-bottom: 10px;
 }
 
-/* Styling for the sections */
-.section {
-    margin-bottom: 40px;
+/* Keyframe for the header animation */
+@keyframes headerAnimation {
+    0% {
+        color: orange;
+        background-color: white;
+        font-size: 48px;
+    }
+    50% {
+        color: white;
+        background-color: orange;
+        font-size: 54px;
+    }
+    100% {
+        color: orange;
+        background-color: white;
+        font-size: 48px;
+    }
 }
 
-.favorite-places {
-    background-color: #f4f4f4;
-    padding: 20px;
-    border-radius: 8px;
+/* Button hover transition */
+button {
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #007bff; /* Default button color */
+    color: white;
+    border: none;
+    cursor: pointer;
 }
 
-.favorite-animal-links {
-    padding: 20px;
-    border: 2px solid #ddd;
-    border-radius: 8px;
-    background-color: #fafafa;
+button:hover {
+    background-color: darkorange;
+    transform: scale(1.1);  /* Slightly enlarge on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Subtle shadow on hover */
 }
 
-/* List and link styling */
-ol, ul {
-    padding-left: 20px;
-}
-
-a {
-    display: block;
-    margin-bottom: 10px;
-    color: blue;
-    text-decoration: none;
-    transition: color 0.3s ease; /* Smooth color transition */
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-/* Image styling */
-.image-container {
-    text-align: center;
-}
-
+/* Image hover zoom effect */
 .image-container img {
-    width: 50%;
-    border: 2px solid #ddd;
-    border-radius: 8px;
+    transition: transform 0.3s ease;
 }
 
-/* Responsive Images */
-img {
-    max-width: 100%;
-    height: auto; /* Ensures images scale nicely */
+.image-container img:hover {
+    transform: scale(1.1);
 }
 
-/* Table styling */
+/* Media Controls Styling */
+.media-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+button.play-button, button.pause-button, button.stop-button {
+    padding: 12px 20px;
+    margin: 0 10px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #007bff; /* Default button color */
+    color: white;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button.play-button:hover, 
+button.pause-button:hover,
+button.stop-button:hover {
+    background-color: darkorange;
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+button:focus {
+    outline: 2px solid orange; /* Highlight focus with orange outline */
+}
+
+/* Volume Control */
+.volume-control {
+    display: flex;
+    align-items: center;
+}
+
+input[type="range"] {
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+}
+
+input[type="range"]:hover {
+    background-color: #ffb74d;  /* Light orange when hovered */
+}
+
+/* Table Styling */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -122,13 +162,6 @@ th, td {
 
 th {
     background-color: #f2f2f2;
-}
-
-/* Title image styling */
-.title-image {
-    display: block;
-    margin: 0 auto;
-    max-width: 125px; /* Set maximum width for the GIF */
 }
 
 /* Additional styles for page 3 elements */
@@ -176,51 +209,6 @@ th {
     border: 2px dashed #ddd; /* Dashed border for placeholder */
     text-align: center;
     margin-bottom: 20px;
-}
-
-/* Media Controls Styling */
-.media-controls {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 20px 0;
-}
-
-button {
-    padding: 10px 15px;
-    margin: 0 10px;
-    font-size: 18px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    background-color: #007bff; /* Default button color */
-    color: white;
-    transition: background-color 0.3s ease;
-}
-
-/* Pseudo-class: hover */
-button:hover {
-    background-color: #0056b3; /* Darker blue on hover */
-}
-
-/* Pseudo-class: active */
-button:active {
-    background-color: #003d7a; /* Even darker blue when active */
-}
-
-/* Pseudo-class: focus */
-button:focus {
-    outline: 2px solid orange; /* Highlight focus with orange outline */
-}
-
-/* Volume Control */
-.volume-control {
-    display: flex;
-    align-items: center;
-}
-
-input[type="range"] {
-    margin-left: 10px;
 }
 
 /* Pseudo-class: visited (for example, if links were used) */
