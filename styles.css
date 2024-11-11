@@ -48,12 +48,15 @@ h1 {
     animation: headerAnimation 5s infinite;
 }
 
-h2 {
-    color: orange;
-    font-size: 36px;
-    text-decoration: underline;
-    margin-top: 20px;
-    margin-bottom: 10px;
+/* Add a fixed container for animated title to prevent page resizing */
+.animated-title {
+    width: 100%; /* Ensure it takes the full width */
+    max-width: 100%; /* Prevents overflow */
+    height: 80px; /* Set a fixed height */
+    overflow: hidden; /* Hide any overflow caused by resizing */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Keyframe for the header animation */
@@ -107,11 +110,11 @@ button:hover {
     align-items: center;
     justify-content: center;
     margin: 20px 0;
+    gap: 20px; /* Added spacing between buttons */
 }
 
 button.play-button, button.pause-button, button.stop-button {
     padding: 12px 20px;
-    margin: 0 10px;
     font-size: 18px;
     border: none;
     border-radius: 5px;
@@ -164,46 +167,67 @@ th {
     background-color: #f2f2f2;
 }
 
-/* Additional styles for page 3 elements */
-
-/* Background color element */
-.background-element {
-    background-color: #e0f7fa; /* Light blue background */
-    padding: 20px;
-    border-radius: 8px;
-    margin-bottom: 20px;
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto;
 }
 
-/* CSS shape (button) */
-.css-shape {
-    text-align: center;
-    margin-bottom: 20px;
+label {
+    font-size: 18px;
+    font-weight: bold;
 }
 
-.css-shape button {
-    padding: 10px 20px;
-    background-color: orange; /* Button background color */
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+input[type="text"], 
+input[type="password"], 
+input[type="email"], 
+input[type="date"], 
+textarea {
+    padding: 10px;
     font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-.css-shape button:hover {
-    background-color: darkorange; /* Button hover color */
+button[type="submit"] {
+    padding: 15px 25px;
+    background-color: #007bff;
+    border-radius: 5px;
+    color: white;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
 }
 
-/* Gradient element */
-.gradient-element {
-    background: linear-gradient(to right, #ffcc80, #ffab40); /* Orange gradient */
-    padding: 20px;
-    border-radius: 8px;
-    margin-bottom: 20px;
-    color: white; /* Text color in gradient section */
+button[type="submit"]:hover {
+    background-color: darkorange;
 }
 
-/* Video placeholder */
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+/* Styling for form elements */
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="date"]:focus,
+textarea:focus {
+    border-color: darkorange;
+    outline: none;
+}
+
+/* Add some padding for spacing */
+.container {
+    padding: 30px;
+}
+
+/* Styling for the video placeholder */
 .video-placeholder {
     padding: 20px;
     border: 2px dashed #ddd; /* Dashed border for placeholder */
@@ -211,7 +235,7 @@ th {
     margin-bottom: 20px;
 }
 
-/* Pseudo-class: visited (for example, if links were used) */
-.menu a:visited {
-    color: purple; /* Change color of visited links */
+/* Styling for all links */
+.menu a {
+    text-decoration: none;
 }
