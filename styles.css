@@ -38,6 +38,17 @@ body {
     padding: 30px; /* Increased padding for better spacing */
 }
 
+/* Animated title styling */
+.animated-title {
+    width: 100%;
+    height: 150px; /* Fixed size for the animated title container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    text-align: center;
+}
+
 /* Styling for headings */
 h1 {
     color: orange;
@@ -48,15 +59,12 @@ h1 {
     animation: headerAnimation 5s infinite;
 }
 
-/* Add a fixed container for animated title to prevent page resizing */
-.animated-title {
-    width: 100%; /* Ensure it takes the full width */
-    max-width: 100%; /* Prevents overflow */
-    height: 80px; /* Set a fixed height */
-    overflow: hidden; /* Hide any overflow caused by resizing */
-    display: flex;
-    align-items: center;
-    justify-content: center;
+h2 {
+    color: orange;
+    font-size: 36px;
+    text-decoration: underline;
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
 
 /* Keyframe for the header animation */
@@ -110,11 +118,11 @@ button:hover {
     align-items: center;
     justify-content: center;
     margin: 20px 0;
-    gap: 20px; /* Added spacing between buttons */
 }
 
 button.play-button, button.pause-button, button.stop-button {
     padding: 12px 20px;
+    margin: 0 10px;
     font-size: 18px;
     border: none;
     border-radius: 5px;
@@ -167,67 +175,46 @@ th {
     background-color: #f2f2f2;
 }
 
-/* Form Styling */
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    max-width: 500px;
-    margin: 0 auto;
+/* Additional styles for page 3 elements */
+
+/* Background color element */
+.background-element {
+    background-color: #e0f7fa; /* Light blue background */
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
 }
 
-label {
-    font-size: 18px;
-    font-weight: bold;
+/* CSS shape (button) */
+.css-shape {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-input[type="text"], 
-input[type="password"], 
-input[type="email"], 
-input[type="date"], 
-textarea {
-    padding: 10px;
-    font-size: 16px;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-button[type="submit"] {
-    padding: 15px 25px;
-    background-color: #007bff;
-    border-radius: 5px;
+.css-shape button {
+    padding: 10px 20px;
+    background-color: orange; /* Button background color */
     color: white;
-    font-size: 18px;
     border: none;
+    border-radius: 5px;
     cursor: pointer;
+    font-size: 16px;
 }
 
-button[type="submit"]:hover {
-    background-color: darkorange;
+.css-shape button:hover {
+    background-color: darkorange; /* Button hover color */
 }
 
-input[type="checkbox"] {
-    margin-right: 10px;
+/* Gradient element */
+.gradient-element {
+    background: linear-gradient(to right, #ffcc80, #ffab40); /* Orange gradient */
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    color: white; /* Text color in gradient section */
 }
 
-/* Styling for form elements */
-input[type="text"]:focus,
-input[type="password"]:focus,
-input[type="email"]:focus,
-input[type="date"]:focus,
-textarea:focus {
-    border-color: darkorange;
-    outline: none;
-}
-
-/* Add some padding for spacing */
-.container {
-    padding: 30px;
-}
-
-/* Styling for the video placeholder */
+/* Video placeholder */
 .video-placeholder {
     padding: 20px;
     border: 2px dashed #ddd; /* Dashed border for placeholder */
@@ -235,7 +222,7 @@ textarea:focus {
     margin-bottom: 20px;
 }
 
-/* Styling for all links */
-.menu a {
-    text-decoration: none;
+/* Pseudo-class: visited (for example, if links were used) */
+.menu a:visited {
+    color: purple; /* Change color of visited links */
 }
